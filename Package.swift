@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "web3.swift",
+    name: "web3eth.swift",
     platforms: [
         .iOS(SupportedPlatform.IOSVersion.v13),
         .macOS(SupportedPlatform.MacOSVersion.v11),
@@ -21,7 +21,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "web3",
+            name: "web3eth",
             dependencies:
                 [
                     .target(name: "keccaktiny"),
@@ -63,7 +63,7 @@ let package = Package(
         ),
         .testTarget(
             name: "web3swiftTests",
-            dependencies: ["web3", "web3-zksync"],
+            dependencies: ["web3eth", "web3-zksync"],
             path: "web3sTests",
             resources: [
                 .copy("Resources/rlptests.json"),
