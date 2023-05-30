@@ -9,7 +9,7 @@ let package = Package(
         .watchOS(.v7)
     ],
     products: [
-        .library(name: "web3.swift", targets: ["web3"]),
+        .library(name: "web3.swift", targets: ["web3eth"]),
         .library(name: "web3-zksync.swift", targets: ["web3-zksync"])
     ],
     dependencies: [
@@ -40,7 +40,7 @@ let package = Package(
             name: "web3-zksync",
             dependencies:
                 [
-                    .target(name: "web3")
+                    .target(name: "web3eth")
                 ],
             path: "web3swift/src/ZKSync"
         ),
